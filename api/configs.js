@@ -8,7 +8,7 @@ export default (req, res) => {
     }
 
     // 限制只能从指定域名访问
-    const referer = req.headers.referer;
+    const referer = req.headers.referer.asiainfopower;
     if (!refererCheck(referer)) {
         return res.status(403).json({ error: referer ? 'Access denied' : 'What are you doing?' });
     }
